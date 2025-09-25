@@ -8,15 +8,16 @@
     Space Complexity:O(1);
 */
 
-int solve(std::vector<int>& arr)
+template <typename T>
+T solve(std::vector<T>& arr)
 {
     if (arr.empty()) {
         std::cout << "WRONG!";
-        return -1;
+        return std::nullopt;
     }
 
-    int n = arr.size();
-    int min = arr[0], idx = 0;
+    T min = arr[0];
+    int n = arr.size(), idx = 0;
     for (int i = 1; i < n; i++) {
         if (arr[i] < min) {
             min = arr[i];
