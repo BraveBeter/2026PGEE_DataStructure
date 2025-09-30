@@ -7,7 +7,8 @@
     Space Complexity:O(1);
 */
 
-void solve(std::vector<int>& arr, int begin, int end)
+template <typename T>
+void solve(std::vector<T>& arr, int begin, int end)
 {
     int n = arr.size(), len = end - begin + 1;
     if (begin < 0 || end >= n || len < 0) {
