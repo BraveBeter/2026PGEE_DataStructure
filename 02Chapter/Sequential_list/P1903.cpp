@@ -6,7 +6,8 @@
     Time Complexity :O(n);
     Space Complexity:O(1);
 */
-void solve(std::vector<int>& arr, int x)
+template <typename T>
+void solve(std::vector<T>& arr, T x)
 {
     int n = arr.size(), cnt = 0;
 

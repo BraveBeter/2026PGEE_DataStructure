@@ -6,7 +6,8 @@
     Time Complexity :O(n);
     Space Complexity:O(1);
 */
-void solve(std::vector<int>& arr, int s, int t)
+template <typename T>
+void solve(std::vector<T>& arr, T s, T t)
 {
     if (s > t) {
         std::cout << "interval is invalid";

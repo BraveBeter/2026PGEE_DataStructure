@@ -6,7 +6,8 @@
     Time Complexity :O(n + m);
     Space Complexity:O(1);
 */
-void reverseSpecialIntervalArray(std::vector<int>& arr, int begin, int end)
+template <typename T>
+void reverseSpecialIntervalArray(std::vector<T>& arr, int begin, int end)
 {
     int n = arr.size(), len = end - begin + 1;
     if (begin < 0 || end >= n || len < 0) {
@@ -19,7 +20,8 @@ void reverseSpecialIntervalArray(std::vector<int>& arr, int begin, int end)
     }
 }
 
-void solve(std::vector<int>& arr, int n, int m)
+template <typename T>
+void solve(std::vector<T>& arr, int n, int m)
 {
     reverseSpecialIntervalArray(arr, 0, n - 1);
     reverseSpecialIntervalArray(arr, n, n + m - 1);

@@ -6,9 +6,11 @@
     Time Complexity :O(n);
     Space Complexity:O(1);
 */
-void solve(std::vector<int>& arr)
+template <typename T>
+void solve(std::vector<T>& arr)
 {
-    int n = arr.size(), last = arr[0], cnt = 0;
+    int n = arr.size(), cnt = 0;
+    T last = arr[0];
 
     for (int i = 1; i < n; i++) {
         if (arr[i] == last)

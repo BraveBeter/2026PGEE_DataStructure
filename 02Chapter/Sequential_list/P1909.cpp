@@ -6,7 +6,8 @@
     Time Complexity:O(max(n, m, k));
     Space Complexity:O(1);
 */
-void solve(const std::vector<int>& A, const std::vector<int>& B, const std::vector<int>& C)
+template <typename T>
+void solve(const std::vector<T>& A, const std::vector<T>& B, const std::vector<T>& C)
 {
     std::vector<int> p(3);
     int n = A.size(), m = B.size(), k = C.size();
@@ -17,7 +18,7 @@ void solve(const std::vector<int>& A, const std::vector<int>& B, const std::vect
             p[0]++, p[1]++, p[2]++;
 
         } else {
-            int max = std::max({ A[p[0]], B[p[1]], C[p[2]] });
+            T max = std::max({ A[p[0]], B[p[1]], C[p[2]] });
 
             while (p[0] < n && A[p[0]] < max)
                 p[0]++;

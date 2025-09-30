@@ -6,10 +6,11 @@
     Time Complexity :O(n + m);
     Space Complexity:O(n + m);
 */
-std::vector<int> solve(const std::vector<int>& arr1, const std::vector<int>& arr2)
+template <typename T>
+std::vector<int> solve(const std::vector<T>& arr1, const std::vector<T>& arr2)
 {
     int n = arr1.size(), m = arr2.size();
-    std::vector<int> res(n + m);
+    std::vector<T> res(n + m);
 
     int p1 = 0, p2 = 0, idx = 0;
     while (p1 < n && p2 < m) {
