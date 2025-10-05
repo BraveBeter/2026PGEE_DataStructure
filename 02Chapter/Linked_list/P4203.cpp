@@ -12,8 +12,12 @@ using Node = SinglyNode<T>;
 template <typename T>
 void solve(Node<T>* head)
 {
-    if (head == nullptr || head->next == nullptr) {
-        std::cerr << "Empty List";
+    if (head == nullptr) {
+        std::cerr << "The pointer of the head node is null" << std::endl;
+        return;
+    }
+    if (head->next == nullptr) {
+        std::cout << "Note:Empty List";
         return;
     }
 
