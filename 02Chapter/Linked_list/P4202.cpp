@@ -3,7 +3,7 @@
 #include <vector>
 /*
    《2026王道数据结构》综合题P42T02;
-    function:Delete the minimum node (unique) in the singly linked list;
+    function:Delete the minimum node (unique) in the singly linked list with the leading node;
     Time Complexity :O(n);
     Space Complexity:O(1);
 */
