@@ -19,23 +19,19 @@ void solve(Node<T>* head)
     }
 
     Node<T>* p = head;
+    Node<T>* del_prev;
     T min_val = p->next->data;
 
     // Determine the minimum node value
     while (p->next != nullptr) {
-        min_val = std::min(min_val, p->next->data);
-        p = p->next;
-    }
-
-    // Delete the minimum value node
-    p = head;
-    while (p->next != nullptr) {
-        if (p->next->data == min_val) {
-            Node<T>* del = p->next;
-            p->next = p->next->next;
-            delete del;
-            break;
+        if (p->next->data < min_val) {
+            min_val = p->next->data;
+            del_prev = p;
         }
         p = p->next;
     }
+
+    Node<T>* del = del_prev->next;
+    del_prev->next = del->next;
+    delete del;
 }
