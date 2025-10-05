@@ -1,13 +1,15 @@
+#include "node.h"
 #include <iostream>
 #include <vector>
+
+template <typename T>
+using Node = SinglyNode<T>;
 /*
    《2026王道数据结构》综合题P42T03;
     function:Inverted singly linked list with the leading node in place;
     Time Complexity :O(n);
     Space Complexity:O(1);
 */
-template <typename T>
-using Node = SinglyNode<T>;
 
 template <typename T>
 void solve(Node<T>* head)

@@ -1,14 +1,15 @@
 #include "node.h"
 #include <iostream>
 #include <vector>
+
+template <typename T>
+using Node = SinglyNode<T>;
 /*
    《2026王道数据结构》综合题P42T02;
     function:Delete the minimum node (unique) in the singly linked list with the leading node;
     Time Complexity :O(n);
     Space Complexity:O(1);
 */
-template <typename T>
-using Node = SinglyNode<T>;
 
 template <typename T>
 void solve(Node<T>* head)

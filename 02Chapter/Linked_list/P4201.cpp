@@ -1,14 +1,15 @@
 #include "node.h"
 #include <iostream>
 #include <vector>
+
+template <typename T>
+using Node = SinglyNode<T>;
 /*
    《2026王道数据结构》综合题P42T01;
     function:Delete the element with a value of X in the singly linked list with the leading node and free up space；
     Time Complexity :O(n);
     Space Complexity:O(1);
 */
-template <typename T>
-using Node = SinglyNode<T>;
 
 template <typename T>
 void solve(Node<T>* head, T x)
